@@ -1,6 +1,6 @@
 {
-  "package": "fhir.who.smart-ig-empty",
-  "version": "0.2.1",
+  "package": "fhir.who.smart-trust",
+  "version": "0.0.1",
   "fhirVersion": "4.0.1",
   "jurisdiction": "001",
   "extensions": [],

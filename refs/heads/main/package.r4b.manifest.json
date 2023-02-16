@@ -1,6 +1,6 @@
 {
-  "version" : "0.2.1",
-  "date" : "20230130134931",
+  "version" : "0.0.1",
+  "date" : "20230216102812",
   "notForPublication" : true,
-  "name" : "fhir.who.smart-ig-empty.r4b"
+  "name" : "fhir.who.smart-trust.r4b"
 }
