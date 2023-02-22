@@ -1,0 +1,32 @@
+﻿smarttrust : Validation Results
+=========================================
+
+err = 0, warn = 4, info = 0
+IG Publisher Version: 1.2.37
+Generated Wed Feb 22 22:50:58 UTC 2023. FHIR version 4.0.1 for fhir.who.smart-trust#0.0.1 (canonical = http://worldhealthorganization.github.io/smart-trust)
+ Build Errors : 9 / 3 / 0
+ /github/workspace/fsh-generated/resources/CodeSystem-trust-service-context : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-fhir.who.smart-trust : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-credential-content-type : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-credential-service-type : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-credential-type : 0 / 0 / 1
+</table>
+== n/a ==
+ERROR: /github/workspace/output/checklist.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 234, column 38: The link 'usecases.html' for "Business Requirements.Use Cases" cannot be resolved
+ERROR: /github/workspace/output/checklist.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 304, column 38: The link 'sequence_diagram.html' for "Data Models and Exchange.Sequence Diagram" cannot be resolved
+ERROR: /github/workspace/output/checklist.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 318, column 38: The link 'artifacts.html#structures-logical-models' for "Indices.Artifacts Summary.Structures:Logical Models" cannot be resolved (valid targets: [terminology-value-sets, segment-header, publish-box, bottom, segment-post-footer, family-logo, family-nav, ig-status, artifacts-summary, 1, 2, terminology-code-systems, top, stripe, segment-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: /github/workspace/output/content_profiles.html#/html/body/div/div/div/div/div/ul/li/ul/li/a at Line 219, column 12: The link 'http://build.fhir.org/ig/HL7/fhir-shc-vaccination-ig' for "COVID-19 vaccine and testing-specific specification" cannot be resolved
+ERROR: /github/workspace/output/decision_support.html#/html/body/div/div/div/div/div/p/a at Line 441, column 2: The link 'tx.fhir.org' for "tx.fhir.org" cannot be resolved
+ERROR: /github/workspace/output/instructions.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 262, column 42: The link '#checklist' for "Smart Guidelines IG checklist" cannot be resolved (valid targets: [instructions, publish-box, segment-post-footer, new-smart, adaptation, creating-a-new-github-repository, family-logo, top, scope, country-adaptation-of-an-existing-guide, stripe, segment-footer, creating-a-new-who-smart-guidline, segment-content, generation, github, generating-an-implmentation-guide, segment-header, bottom, directory-structure, family-nav, ig-status, 1, modify, 2, 3, 4, modifying-the-template-repository, directory-layout-for-content, segment-navbar, segment-breadcrumb])
+ERROR: /github/workspace/output/instructions.html#/html/body/div/div/div/div/div/div/ul/li/dl/dd/a at Line 266, column 13: The link 'hl7.org/fhir/uv/shorthand/' for "FHIR Shorthand" cannot be resolved
+ERROR: /github/workspace/output/instructions.html#/html/body/div/div/div/div/div/div/ul/li/dl/dd/a at Line 278, column 68: The link '#checklist' for "Smart Guidelines IG checklist" cannot be resolved (valid targets: [instructions, publish-box, segment-post-footer, new-smart, adaptation, creating-a-new-github-repository, family-logo, top, scope, country-adaptation-of-an-existing-guide, stripe, segment-footer, creating-a-new-who-smart-guidline, segment-content, generation, github, generating-an-implmentation-guide, segment-header, bottom, directory-structure, family-nav, ig-status, 1, modify, 2, 3, 4, modifying-the-template-repository, directory-layout-for-content, segment-navbar, segment-breadcrumb])
+ERROR: /github/workspace/output/requirements.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 172, column 12: The link 'usecases.html' for "Use Cases" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-trust-service-context.json ==
+== fsh-generated/resources/ImplementationGuide-fhir.who.smart-trust.json ==
+WARNING: ImplementationGuide/fhir.who.smart-trust: ImplementationGuide: Rule ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== fsh-generated/resources/ValueSet-credential-content-type.json ==
+== fsh-generated/resources/ValueSet-credential-service-type.json ==
+== fsh-generated/resources/ValueSet-credential-type.json ==

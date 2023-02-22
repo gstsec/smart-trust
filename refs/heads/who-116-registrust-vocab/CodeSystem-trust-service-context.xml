@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="trust-service-context"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">who<a name="trust-service-context-who"> </a></td><td>WHO DDCC</td></tr><tr><td style="white-space:nowrap">dcc<a name="trust-service-context-dcc"> </a></td><td>EU DCC</td></tr><tr><td style="white-space:nowrap">icao<a name="trust-service-context-icao"> </a></td><td>ICAO</td></tr><tr><td style="white-space:nowrap">au<a name="trust-service-context-au"> </a></td><td>AU</td></tr><tr><td style="white-space:nowrap">shc<a name="trust-service-context-shc"> </a></td><td>SMART Health Card</td></tr><tr><td style="white-space:nowrap">divoc<a name="trust-service-context-divoc"> </a></td><td>DIVOC</td></tr><tr><td style="white-space:nowrap">vaccine_credential<a name="trust-service-context-vaccine_credential"> </a></td><td>Vaccine Credential</td></tr><tr><td style="white-space:nowrap">test_credential<a name="trust-service-context-test_credential"> </a></td><td>Lab Test Credential</td></tr><tr><td style="white-space:nowrap">recovery_credential<a name="trust-service-context-recovery_credential"> </a></td><td>Recovery Credential</td></tr><tr><td style="white-space:nowrap">exemption_credential<a name="trust-service-context-exemption_credential"> </a></td><td>Exemption Credential</td></tr><tr><td style="white-space:nowrap">ips_credential<a name="trust-service-context-ips_credential"> </a></td><td>International Patient Summary Credential</td></tr><tr><td style="white-space:nowrap">COVID-19<a name="trust-service-context-COVID-19"> </a></td><td>COVID-19</td></tr><tr><td style="white-space:nowrap">Monkeypox<a name="trust-service-context-Monkeypox"> </a></td><td>Monkeypox</td></tr></table></div>
+  </text>
+  <url value="http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context"/>
+  <version value="0.0.1"/>
+  <name value="WHOSMARTTrust_trust_service_context"/>
+  <title value="WHO SMART Trust service context"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2023-02-22T22:50:38+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Controlled vocabulary used to define WHO SMART Trust network service provider characteristics."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="13"/>
+  <concept>
+    <code value="who"/>
+    <display value="WHO DDCC"/>
+  </concept>
+  <concept>
+    <code value="dcc"/>
+    <display value="EU DCC"/>
+  </concept>
+  <concept>
+    <code value="icao"/>
+    <display value="ICAO"/>
+  </concept>
+  <concept>
+    <code value="au"/>
+    <display value="AU"/>
+  </concept>
+  <concept>
+    <code value="shc"/>
+    <display value="SMART Health Card"/>
+  </concept>
+  <concept>
+    <code value="divoc"/>
+    <display value="DIVOC"/>
+  </concept>
+  <concept>
+    <code value="vaccine_credential"/>
+    <display value="Vaccine Credential"/>
+  </concept>
+  <concept>
+    <code value="test_credential"/>
+    <display value="Lab Test Credential"/>
+  </concept>
+  <concept>
+    <code value="recovery_credential"/>
+    <display value="Recovery Credential"/>
+  </concept>
+  <concept>
+    <code value="exemption_credential"/>
+    <display value="Exemption Credential"/>
+  </concept>
+  <concept>
+    <code value="ips_credential"/>
+    <display value="International Patient Summary Credential"/>
+  </concept>
+  <concept>
+    <code value="COVID-19"/>
+    <display value="COVID-19"/>
+  </concept>
+  <concept>
+    <code value="Monkeypox"/>
+    <display value="Monkeypox"/>
+  </concept>
+</CodeSystem>

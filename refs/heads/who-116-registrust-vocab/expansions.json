@@ -1,0 +1,211 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "94664f9a-e56b-48e7-8352-22a4e62fd2e1",
+  "meta" : {
+    "lastUpdated" : "2023-02-22T22:50:38.899+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-content-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "credential-content-type",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-trust-service-context.html\">WHO SMART Trust service context v0.0.1 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-COVID-19\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-COVID-19\">COVID-19</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>COVID-19</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-Monkeypox\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-Monkeypox\">Monkeypox</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>Monkeypox</td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-content-type",
+      "version" : "0.0.1",
+      "name" : "WHOSMARTTrust_credential_content_type",
+      "title" : "WHO SMART Trust credential content type",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2023-02-22T22:50:38+00:00",
+      "publisher" : "WHO",
+      "contact" : [{
+        "name" : "WHO",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://who.int"
+        }]
+      }],
+      "description" : "Health credential content type",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:97d8a844-26a4-4cbd-80b1-cf52fd300271",
+        "timestamp" : "2023-02-22T22:50:49+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context|0.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "COVID-19",
+          "display" : "COVID-19"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "Monkeypox",
+          "display" : "Monkeypox"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-service-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "credential-service-type",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-trust-service-context.html\">WHO SMART Trust service context v0.0.1 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-vaccine-credential\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-vaccine_credential\">vaccine_credential</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>Vaccine Credential</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-test-credential\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-test_credential\">test_credential</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>Lab Test Credential</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-recovery-credential\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-recovery_credential\">recovery_credential</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>Recovery Credential</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-exemption-credential\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-exemption_credential\">exemption_credential</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>Exemption Credential</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-ips-credential\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-ips_credential\">ips_credential</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>International Patient Summary Credential</td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-service-type",
+      "version" : "0.0.1",
+      "name" : "WHOSMARTTrust_credential_service_type",
+      "title" : "WHO SMART Trust credential service type",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2023-02-22T22:50:38+00:00",
+      "publisher" : "WHO",
+      "contact" : [{
+        "name" : "WHO",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://who.int"
+        }]
+      }],
+      "description" : "Health credential service type",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:9e77e44d-e82e-4473-a731-9e46667c306e",
+        "timestamp" : "2023-02-22T22:50:49+00:00",
+        "total" : 5,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context|0.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "vaccine_credential",
+          "display" : "Vaccine Credential"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "test_credential",
+          "display" : "Lab Test Credential"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "recovery_credential",
+          "display" : "Recovery Credential"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "exemption_credential",
+          "display" : "Exemption Credential"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "ips_credential",
+          "display" : "International Patient Summary Credential"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "credential-type",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 6 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-trust-service-context.html\">WHO SMART Trust service context v0.0.1 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-who\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-who\">who</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>WHO DDCC</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-dcc\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-dcc\">dcc</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>EU DCC</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-icao\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-icao\">icao</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>ICAO</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-au\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-au\">au</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>AU</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-shc\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-shc\">shc</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>SMART Health Card</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---worldhealthorganization.github.io-smart-trust-CodeSystem-trust-service-context-divoc\"> </a>  <a href=\"CodeSystem-trust-service-context.html#trust-service-context-divoc\">divoc</a></td><td>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</td><td>DIVOC</td></tr></table></div>"
+      },
+      "url" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-type",
+      "version" : "0.0.1",
+      "name" : "WHOSMARTTrust_credential_type",
+      "title" : "WHO SMART Trust credential type",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2023-02-22T22:50:38+00:00",
+      "publisher" : "WHO",
+      "contact" : [{
+        "name" : "WHO",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://who.int"
+        }]
+      }],
+      "description" : "Health credential type",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:f86f6615-9a7f-4941-8082-e22605a1a7eb",
+        "timestamp" : "2023-02-22T22:50:49+00:00",
+        "total" : 6,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context|0.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "who",
+          "display" : "WHO DDCC"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "dcc",
+          "display" : "EU DCC"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "icao",
+          "display" : "ICAO"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "au",
+          "display" : "AU"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "shc",
+          "display" : "SMART Health Card"
+        },
+        {
+          "system" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+          "code" : "divoc",
+          "display" : "DIVOC"
+        }]
+      }
+    }
+  }]
+}

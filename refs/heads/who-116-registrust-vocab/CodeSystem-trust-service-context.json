@@ -1,0 +1,85 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "trust-service-context",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">who<a name=\"trust-service-context-who\"> </a></td><td>WHO DDCC</td></tr><tr><td style=\"white-space:nowrap\">dcc<a name=\"trust-service-context-dcc\"> </a></td><td>EU DCC</td></tr><tr><td style=\"white-space:nowrap\">icao<a name=\"trust-service-context-icao\"> </a></td><td>ICAO</td></tr><tr><td style=\"white-space:nowrap\">au<a name=\"trust-service-context-au\"> </a></td><td>AU</td></tr><tr><td style=\"white-space:nowrap\">shc<a name=\"trust-service-context-shc\"> </a></td><td>SMART Health Card</td></tr><tr><td style=\"white-space:nowrap\">divoc<a name=\"trust-service-context-divoc\"> </a></td><td>DIVOC</td></tr><tr><td style=\"white-space:nowrap\">vaccine_credential<a name=\"trust-service-context-vaccine_credential\"> </a></td><td>Vaccine Credential</td></tr><tr><td style=\"white-space:nowrap\">test_credential<a name=\"trust-service-context-test_credential\"> </a></td><td>Lab Test Credential</td></tr><tr><td style=\"white-space:nowrap\">recovery_credential<a name=\"trust-service-context-recovery_credential\"> </a></td><td>Recovery Credential</td></tr><tr><td style=\"white-space:nowrap\">exemption_credential<a name=\"trust-service-context-exemption_credential\"> </a></td><td>Exemption Credential</td></tr><tr><td style=\"white-space:nowrap\">ips_credential<a name=\"trust-service-context-ips_credential\"> </a></td><td>International Patient Summary Credential</td></tr><tr><td style=\"white-space:nowrap\">COVID-19<a name=\"trust-service-context-COVID-19\"> </a></td><td>COVID-19</td></tr><tr><td style=\"white-space:nowrap\">Monkeypox<a name=\"trust-service-context-Monkeypox\"> </a></td><td>Monkeypox</td></tr></table></div>"
+  },
+  "url" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+  "version" : "0.0.1",
+  "name" : "WHOSMARTTrust_trust_service_context",
+  "title" : "WHO SMART Trust service context",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2023-02-22T22:50:38+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Controlled vocabulary used to define WHO SMART Trust network service provider characteristics.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 13,
+  "concept" : [{
+    "code" : "who",
+    "display" : "WHO DDCC"
+  },
+  {
+    "code" : "dcc",
+    "display" : "EU DCC"
+  },
+  {
+    "code" : "icao",
+    "display" : "ICAO"
+  },
+  {
+    "code" : "au",
+    "display" : "AU"
+  },
+  {
+    "code" : "shc",
+    "display" : "SMART Health Card"
+  },
+  {
+    "code" : "divoc",
+    "display" : "DIVOC"
+  },
+  {
+    "code" : "vaccine_credential",
+    "display" : "Vaccine Credential"
+  },
+  {
+    "code" : "test_credential",
+    "display" : "Lab Test Credential"
+  },
+  {
+    "code" : "recovery_credential",
+    "display" : "Recovery Credential"
+  },
+  {
+    "code" : "exemption_credential",
+    "display" : "Exemption Credential"
+  },
+  {
+    "code" : "ips_credential",
+    "display" : "International Patient Summary Credential"
+  },
+  {
+    "code" : "COVID-19",
+    "display" : "COVID-19"
+  },
+  {
+    "code" : "Monkeypox",
+    "display" : "Monkeypox"
+  }]
+}

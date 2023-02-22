@@ -1,0 +1,37 @@
+[
+  {
+    "id" : "trust-service-context",
+    "type" : "CodeSystem",
+    "url" : "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context",
+    "version" : "0.0.1",
+    "name" : "WHOSMARTTrust_trust_service_context"
+  },
+  {
+    "id" : "fhir.who.smart-trust",
+    "type" : "ImplementationGuide",
+    "url" : "http://worldhealthorganization.github.io/smart-trust/ImplementationGuide/fhir.who.smart-trust",
+    "version" : "0.0.1",
+    "name" : "smarttrust"
+  },
+  {
+    "id" : "credential-content-type",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-content-type",
+    "version" : "0.0.1",
+    "name" : "WHOSMARTTrust_credential_content_type"
+  },
+  {
+    "id" : "credential-service-type",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-service-type",
+    "version" : "0.0.1",
+    "name" : "WHOSMARTTrust_credential_service_type"
+  },
+  {
+    "id" : "credential-type",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-trust/ValueSet/credential-type",
+    "version" : "0.0.1",
+    "name" : "WHOSMARTTrust_credential_type"
+  }
+]

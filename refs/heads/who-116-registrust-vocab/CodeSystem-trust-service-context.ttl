@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "trust-service-context"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">who<a name=\"trust-service-context-who\"> </a></td><td>WHO DDCC</td></tr><tr><td style=\"white-space:nowrap\">dcc<a name=\"trust-service-context-dcc\"> </a></td><td>EU DCC</td></tr><tr><td style=\"white-space:nowrap\">icao<a name=\"trust-service-context-icao\"> </a></td><td>ICAO</td></tr><tr><td style=\"white-space:nowrap\">au<a name=\"trust-service-context-au\"> </a></td><td>AU</td></tr><tr><td style=\"white-space:nowrap\">shc<a name=\"trust-service-context-shc\"> </a></td><td>SMART Health Card</td></tr><tr><td style=\"white-space:nowrap\">divoc<a name=\"trust-service-context-divoc\"> </a></td><td>DIVOC</td></tr><tr><td style=\"white-space:nowrap\">vaccine_credential<a name=\"trust-service-context-vaccine_credential\"> </a></td><td>Vaccine Credential</td></tr><tr><td style=\"white-space:nowrap\">test_credential<a name=\"trust-service-context-test_credential\"> </a></td><td>Lab Test Credential</td></tr><tr><td style=\"white-space:nowrap\">recovery_credential<a name=\"trust-service-context-recovery_credential\"> </a></td><td>Recovery Credential</td></tr><tr><td style=\"white-space:nowrap\">exemption_credential<a name=\"trust-service-context-exemption_credential\"> </a></td><td>Exemption Credential</td></tr><tr><td style=\"white-space:nowrap\">ips_credential<a name=\"trust-service-context-ips_credential\"> </a></td><td>International Patient Summary Credential</td></tr><tr><td style=\"white-space:nowrap\">COVID-19<a name=\"trust-service-context-COVID-19\"> </a></td><td>COVID-19</td></tr><tr><td style=\"white-space:nowrap\">Monkeypox<a name=\"trust-service-context-Monkeypox\"> </a></td><td>Monkeypox</td></tr></table></div>"
+  ]; # 
+  fhir:CodeSystem.url [ fhir:value "http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context"]; # 
+  fhir:CodeSystem.version [ fhir:value "0.0.1"]; # 
+  fhir:CodeSystem.name [ fhir:value "WHOSMARTTrust_trust_service_context"]; # 
+  fhir:CodeSystem.title [ fhir:value "WHO SMART Trust service context"]; # 
+  fhir:CodeSystem.status [ fhir:value "active"]; # 
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:CodeSystem.date [ fhir:value "2023-02-22T22:50:38+00:00"^^xsd:dateTime]; # 
+  fhir:CodeSystem.publisher [ fhir:value "WHO"]; # 
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "WHO" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://who.int" ]
+     ]
+  ]; # 
+  fhir:CodeSystem.description [ fhir:value "Controlled vocabulary used to define WHO SMART Trust network service provider characteristics."]; # 
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ]; # 
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:CodeSystem.content [ fhir:value "complete"]; # 
+  fhir:CodeSystem.count [ fhir:value "13"^^xsd:nonNegativeInteger]; # 
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "who" ];
+     fhir:CodeSystem.concept.display [ fhir:value "WHO DDCC" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "dcc" ];
+     fhir:CodeSystem.concept.display [ fhir:value "EU DCC" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "icao" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ICAO" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "au" ];
+     fhir:CodeSystem.concept.display [ fhir:value "AU" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "shc" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SMART Health Card" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "divoc" ];
+     fhir:CodeSystem.concept.display [ fhir:value "DIVOC" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "vaccine_credential" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Vaccine Credential" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "test_credential" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Lab Test Credential" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "recovery_credential" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Recovery Credential" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "exemption_credential" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Exemption Credential" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "ips_credential" ];
+     fhir:CodeSystem.concept.display [ fhir:value "International Patient Summary Credential" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "COVID-19" ];
+     fhir:CodeSystem.concept.display [ fhir:value "COVID-19" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "Monkeypox" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Monkeypox" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://worldhealthorganization.github.io/smart-trust/CodeSystem/trust-service-context.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
