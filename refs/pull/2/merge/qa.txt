@@ -3,7 +3,7 @@
 
 err = 1, warn = 4, info = 0
 IG Publisher Version: 1.2.37
-Generated Wed Feb 22 17:49:21 UTC 2023. FHIR version 4.0.1 for fhir.who.smart-trust#0.0.1 (canonical = http://worldhealthorganization.github.io/smart-trust)
+Generated Wed Feb 22 19:45:13 UTC 2023. FHIR version 4.0.1 for fhir.who.smart-trust#0.0.1 (canonical = http://worldhealthorganization.github.io/smart-trust)
  Build Errors : 9 / 3 / 0
  /github/workspace/fsh-generated/resources/ImplementationGuide-fhir.who.smart-trust : 1 / 1 / 1
 </table>

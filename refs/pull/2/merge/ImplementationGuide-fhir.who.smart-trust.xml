@@ -704,10 +704,10 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="trust_gateway_architecture.html"/>
+          <valueUrl value="trust_network_gateway_architecture.html"/>
         </extension>
-        <nameUrl value="trust_gateway_architecture.html"/>
-        <title value="Trust Gateway Architecture"/>
+        <nameUrl value="trust_network_gateway_architecture.html"/>
+        <title value="Trust Network Gateway Architecture"/>
         <generation value="markdown"/>
       </page>
       <page>

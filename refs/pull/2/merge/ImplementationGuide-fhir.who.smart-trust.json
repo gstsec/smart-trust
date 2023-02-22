@@ -885,10 +885,10 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "trust_gateway_architecture.html"
+          "valueUrl" : "trust_network_gateway_architecture.html"
         }],
-        "nameUrl" : "trust_gateway_architecture.html",
-        "title" : "Trust Gateway Architecture",
+        "nameUrl" : "trust_network_gateway_architecture.html",
+        "title" : "Trust Network Gateway Architecture",
         "generation" : "markdown"
       },
       {

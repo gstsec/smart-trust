@@ -990,10 +990,10 @@
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
-           fhir:Extension.valueUrl [ fhir:value "trust_gateway_architecture.html" ]
+           fhir:Extension.valueUrl [ fhir:value "trust_network_gateway_architecture.html" ]
          ];
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "trust_gateway_architecture.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Trust Gateway Architecture" ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "trust_network_gateway_architecture.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Trust Network Gateway Architecture" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 35;
