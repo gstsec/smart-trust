@@ -18,7 +18,7 @@
   fhir:CodeSystem.title [ fhir:value "WHO SMART Trust service context"]; # 
   fhir:CodeSystem.status [ fhir:value "active"]; # 
   fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean]; # 
-  fhir:CodeSystem.date [ fhir:value "2023-02-22T22:50:38+00:00"^^xsd:dateTime]; # 
+  fhir:CodeSystem.date [ fhir:value "2023-02-22T23:06:06+00:00"^^xsd:dateTime]; # 
   fhir:CodeSystem.publisher [ fhir:value "WHO"]; # 
   fhir:CodeSystem.contact [
      fhir:index 0;
