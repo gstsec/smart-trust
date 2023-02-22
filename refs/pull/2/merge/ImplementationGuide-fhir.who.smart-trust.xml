@@ -456,14 +456,6 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="architecture.html"/>
-        </extension>
-        <nameUrl value="architecture.html"/>
-        <title value="Architecture"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="background.html"/>
         </extension>
         <nameUrl value="background.html"/>
@@ -708,6 +700,14 @@
         </extension>
         <nameUrl value="transactions.html"/>
         <title value="Transactions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="trust_gateway_architecture.html"/>
+        </extension>
+        <nameUrl value="trust_gateway_architecture.html"/>
+        <title value="Trust Gateway Architecture"/>
         <generation value="markdown"/>
       </page>
       <page>

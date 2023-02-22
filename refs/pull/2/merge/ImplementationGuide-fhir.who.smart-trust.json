@@ -606,15 +606,6 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "architecture.html"
-        }],
-        "nameUrl" : "architecture.html",
-        "title" : "Architecture",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "background.html"
         }],
         "nameUrl" : "background.html",
@@ -889,6 +880,15 @@
         }],
         "nameUrl" : "transactions.html",
         "title" : "Transactions",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "trust_gateway_architecture.html"
+        }],
+        "nameUrl" : "trust_gateway_architecture.html",
+        "title" : "Trust Gateway Architecture",
         "generation" : "markdown"
       },
       {

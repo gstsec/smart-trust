@@ -680,23 +680,13 @@
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
-           fhir:Extension.valueUrl [ fhir:value "architecture.html" ]
-         ];
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "architecture.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Architecture" ];
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index 4;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
            fhir:Extension.valueUrl [ fhir:value "background.html" ]
          ];
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "background.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Background" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 5;
+         fhir:index 4;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -706,7 +696,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Business Process" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 6;
+         fhir:index 5;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -716,7 +706,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Changes" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 7;
+         fhir:index 6;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -726,7 +716,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Checklist" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 8;
+         fhir:index 7;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -736,7 +726,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Community" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 9;
+         fhir:index 8;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -746,7 +736,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Concepts" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 10;
+         fhir:index 9;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -756,7 +746,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Content Profiles" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 11;
+         fhir:index 10;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -766,7 +756,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Data Exchange" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 12;
+         fhir:index 11;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -776,7 +766,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Decision Support" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 13;
+         fhir:index 12;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -786,7 +776,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Dependencies" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 14;
+         fhir:index 13;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -796,7 +786,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Deployment" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 15;
+         fhir:index 14;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -806,7 +796,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Dictionary" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 16;
+         fhir:index 15;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -816,7 +806,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Disclaimer" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 17;
+         fhir:index 16;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -826,7 +816,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 18;
+         fhir:index 17;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -836,7 +826,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Feedback" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 19;
+         fhir:index 18;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -846,7 +836,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Functional" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 20;
+         fhir:index 19;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -856,7 +846,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Indicators" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 21;
+         fhir:index 20;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -866,7 +856,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Instructions" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 22;
+         fhir:index 21;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -876,7 +866,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Intro" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 23;
+         fhir:index 22;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -886,7 +876,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Layers" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 24;
+         fhir:index 23;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -896,7 +886,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "License" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 25;
+         fhir:index 24;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -906,7 +896,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Maps" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 26;
+         fhir:index 25;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -916,7 +906,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Nonfunctional" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 27;
+         fhir:index 26;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -926,7 +916,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Personas" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 28;
+         fhir:index 27;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -936,7 +926,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Reference Implementation" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 29;
+         fhir:index 28;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -946,7 +936,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "References" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 30;
+         fhir:index 29;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -956,7 +946,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Requirements" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 31;
+         fhir:index 30;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -966,7 +956,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Security Privacy" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 32;
+         fhir:index 31;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -976,7 +966,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Support" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 33;
+         fhir:index 32;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -986,7 +976,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Testing" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 34;
+         fhir:index 33;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
@@ -994,6 +984,16 @@
          ];
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "transactions.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Transactions" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 34;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "trust_gateway_architecture.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "trust_gateway_architecture.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Trust Gateway Architecture" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 35;
