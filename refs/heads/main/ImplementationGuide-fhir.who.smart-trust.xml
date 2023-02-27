@@ -704,6 +704,14 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="trust_network_gateway_architecture.html"/>
+        </extension>
+        <nameUrl value="trust_network_gateway_architecture.html"/>
+        <title value="Trust Network Gateway Architecture"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="use_cases.html"/>
         </extension>
         <nameUrl value="use_cases.html"/>
