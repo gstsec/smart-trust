@@ -176,7 +176,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#trust-registry-network" id="markdown-toc-trust-registry-network">Trust Registry Network</a></li>
-  <li><a href="#trust-gateway" id="markdown-toc-trust-gateway">Trust Gateway</a></li>
+  <li><a href="#trust-network-gateway" id="markdown-toc-trust-network-gateway">Trust Network Gateway</a></li>
 </ul>
 
 </div>
@@ -196,11 +196,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The UNDP project intends to develop and provide an implementation toolkit including an open source reference implementation for the specification, a governance and policy guideline for Regi-TRUST implementers, and technical and functional specifications. <a href="https://www.lfph.io/2021/06/08/gccn/">Contents of the original implementation toolkit is stated here</a> ahead of completion of the pilot. Full technical specifications, implementation guides, and more are forthcoming.</p>
 
-<h3 id="trust-gateway">Trust Gateway</h3>
+<h3 id="trust-network-gateway">Trust Network Gateway</h3>
 
-<p>The Trust Gateway is an open source implementation of a centralized trust network solution available to potential implementers intending to create a local or regional network. This implementation is derived from the <a href="https://github.com/ehn-dcc-development/eu-dcc-overview">European Union Digital COVID Certificate Gateway (EUDCCG)</a>, which has been deployed in an operational setting within the European Union.</p>
+<p>The Trust Network Gateway is an open source implementation of a centralized trust network solution available to potential implementers intending to create a local or regional network. This implementation is derived from the <a href="https://github.com/ehn-dcc-development/eu-dcc-overview">European Union Digital COVID Certificate Gateway (EUDCCG)</a>, which has been deployed in an operational setting within the European Union.</p>
 
-<p>In addition to the core functionality of the EUDCCG, the Trust Gateway implementation also supports:</p>
+<p>In addition to the core functionality of the EUDCCG, the Trust Network Gateway implementation also supports:</p>
 <ul>
   <li>Federation and peer exchange of information between gateways</li>
   <li>Access to metadata content (e.g. value sets/codings, business rules) with explicit adherence to the HL7 FHIR specification</li>
@@ -208,15 +208,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Optional support of online verification and validation workflows</li>
 </ul>
 
-<p>The role of the Trust Gateway is to enable the creation of trust networks by additional
+<p>The role of the Trust Network Gateway is to enable the creation of trust networks by additional
 organizations beyond the EU Member States participating in the EUDCCG,
 expanding the network of operators and trusted parties to form a federated and
 documented network of trust gateways, supporting all major health credential certificates.</p>
 
 <ul>
-  <li><a href="https://github.com/WorldHealthOrganization/ddcc-gateway">Trust Gateway public repository</a></li>
-  <li><a href="https://github.com/WorldHealthOrganization/ddcc-gateway/blob/main/docs/Architecture.md">Architecture</a></li>
+  <li><a href="https://github.com/WorldHealthOrganization/ddcc-gateway">Trust Network Gateway public repository</a></li>
+  <li><a href="./trust_network_gateway_architecture.html">Architecture</a></li>
 </ul>
+
 
 
 
@@ -242,7 +243,7 @@ documented network of trust gateways, supporting all major health credential cer
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 16, 2023 10:29+0000">2023-02-16</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 27, 2023 11:48+0000">2023-02-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
