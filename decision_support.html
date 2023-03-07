@@ -99,7 +99,7 @@
     <ul class="dropdown-menu">
       <li><a href="concepts.html">Concepts</a></li>
       <li><a href="use_cases.html">Use Cases</a></li>
-      <li><a href="decision_support.html">Decision support Logic</a></li>
+      <li><a href="decision_support.html">Decision Support Logic</a></li>
       <li><a href="functional.html">Functional Requirements</a></li>    
     </ul>
   </li>
@@ -464,14 +464,12 @@ Note that using the Java mapping engine also requires the use of a terminology s
   <li>Run the business rules against the FHIR instance</li>
 </ul>
 
-<h4 id="convert-vaccination-credentials-to-ddcc-resource-instance">Convert Vaccination Credentials to DDCC resource instance</h4>
+<h4 id="convert-vaccination-credentials-to-ddcc-resource-instance">Convert Vaccination Credentials to DDCC Resource Instance</h4>
 
 <p>The process starts with converting the vaccination credential to be evaluated into the DDCC FHIR model. For the examples used in this document we’ll start with an example credential payload in the SHC format, which you can download:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl https://raw.githubusercontent.com/dvci/ddcc/who-88-structuremap-tests/structuremap-tests/fixtures/shc/example-00-b-jws-payload-expanded.json <span class="nt">--output</span> example-00-b-jws-payload-expanded.json
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl https://raw.githubusercontent.com/WorldHealthOrganization/ddcc/main/structuremap-tests/fixtures/shc/example-00-b-jws-payload-expanded.json <span class="nt">--output</span> example-00-b-jws-payload-expanded.json
 </code></pre></div></div>
-
-<p><em>TODO: Update the location of this example once merged</em></p>
 
 <p>Credentials can be converted using the appropriate StructureMaps using the <a href="https://github.com/ahdis/matchbox">Matchbox</a> FHIR Server.</p>
 
@@ -479,8 +477,10 @@ Note that using the Java mapping engine also requires the use of a terminology s
 
 <p>The Matchbox server can be run via its docker image.  The following command starts the docker image on a local machine listening on port 8080:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:8080 <span class="nt">--restart</span> unless-stopped eu.gcr.io/fhir-ch/matchbox:v230
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:8080 <span class="nt">--restart</span> unless-stopped eu.gcr.io/fhir-ch/matchbox:v314
 </code></pre></div></div>
+
+<p><em>NOTE: At the time of writing the latest version of Matchbox does not correctly handle the required StructureMap transformations; ensure that the version of Matchbox you’re testing with has been updated. The Matchbox docker image does not appear to have a correct <code class="language-plaintext highlighter-rouge">latest</code> tag, so be sure to specify the actual version number of the latest docker image.</em></p>
 
 <p>Running Matchbox in this fashion uses an in-memory data store rather than a backing database, so will not persist state across different container instantiations.</p>
 
@@ -502,7 +502,7 @@ Note that using the Java mapping engine also requires the use of a terminology s
   <span class="nt">-d</span> <span class="s1">'{ "resourceType": "ImplementationGuide", "version": "0.6.2", "name": "hl7.fhir.uv.shc-vaccination", "packageId": "hl7.fhir.uv.shc-vaccination" }'</span>
 </code></pre></div></div>
 
-<h5 id="converting-the-vaccination-into-ddcc-fhir-resource">Converting the Vaccination Into DDCC FHIR resource</h5>
+<h5 id="converting-the-vaccination-credential-into-a-ddcc-fhir-resource">Converting the Vaccination Credential Into a DDCC FHIR Resource</h5>
 
 <p>This is a two step process. The first step is to convert the vaccination credential payload into the DDCC CoreDataSet logical model using the <a href="https://worldhealthorganization.github.io/ddcc/artifacts.html#terminology-structure-maps">appropriate StructureMap from the DDCC IG</a>:</p>
 
@@ -524,7 +524,7 @@ Note that using the Java mapping engine also requires the use of a terminology s
 <span class="nt">-o</span> example-00-a-DDCC.json
 </code></pre></div></div>
 
-<p><em>NOTE: These conversion steps are still being debugged, particularly the final one, and the CQL has not been tested against the final version</em></p>
+<p><em>NOTE: At the time of writing these conversion steps did not work correctly, particularly the second one, and the CQL has not been tested against the final version</em></p>
 
 <p>The record is now ready to be evaluated against the business rules.</p>
 
@@ -569,6 +569,59 @@ define "Completed Immunizations":
 <span class="nt">--data-binary</span> @DDCCPass.cql <span class="se">\</span>
 <span class="nt">--output</span> DDCCPassELM.json
 </code></pre></div></div>
+
+<h5 id="extracting-elm-from-a-fhir-library">Extracting ELM From a FHIR Library</h5>
+
+<p>As an alternative to translating the CQL, if the desired CQL already exists and the ELM translation is packaged with the CQL as part of a FHIR Library then the ELM can be extracted from the Library. This document describes how to extract the ELM using a simple Node.js project. Node.js will first need to be installed if it is not already available. A new Node.js project can be set up using npm:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>ExtractELM
+<span class="nb">cd </span>ExtractELM
+npm init <span class="nt">--yes</span>
+</code></pre></div></div>
+
+<p>The following example JavaScript code can serve as a starting point:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This example loads a FHIR Library, extracts the ELM, and writes it to a file</span>
+
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">argv</span><span class="p">,</span> <span class="nx">exit</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">process</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">argv</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Usage: </span><span class="p">${</span><span class="nx">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span><span class="s2"> </span><span class="p">${</span><span class="nx">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]}</span><span class="s2"> &lt;FHIR-Library&gt; &lt;ELM-File&gt;`</span><span class="p">);</span>
+  <span class="nx">exit</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">libraryFile</span> <span class="o">=</span> <span class="nx">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">elmFile</span> <span class="o">=</span> <span class="nx">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="c1">// Load the Library contents and parse the JSON</span>
+<span class="kd">const</span> <span class="nx">library</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">libraryFile</span><span class="p">),</span> <span class="dl">'</span><span class="s1">utf8</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// Find the ELM data</span>
+<span class="kd">const</span> <span class="nx">elmContent</span> <span class="o">=</span> <span class="nx">library</span><span class="p">.</span><span class="nx">content</span><span class="p">?.</span><span class="nx">find</span><span class="p">(</span><span class="nx">c</span> <span class="o">=&gt;</span> <span class="nx">c</span><span class="p">.</span><span class="nx">contentType</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">application/elm+json</span><span class="dl">'</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">elmContent</span><span class="p">?.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">No ELM content found in Library</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">exit</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Base64 decode the ELM</span>
+<span class="kd">const</span> <span class="nx">elm</span> <span class="o">=</span> <span class="nx">atob</span><span class="p">(</span><span class="nx">elmContent</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+
+<span class="c1">// Write the ELM to the desired output file</span>
+<span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="nx">elmFile</span><span class="p">,</span> <span class="nx">elm</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>An example FHIR Library containing ELM can be downloaded:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl https://raw.githubusercontent.com/WorldHealthOrganization/ddcc/main/input/resources/Library-DDCCPass-1.0.0.json <span class="nt">--output</span> Library-DDCCPass-1.0.0.json
+</code></pre></div></div>
+
+<p>Once the FHIR Library has been downloaded the code can be run to extract the ELM from the Library:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node main.js Library-DDCCPass-1.0.0.json DDCCPassELM.json
+</code></pre></div></div>
+
+<p>Running the script should produce a file with the desired ELM translation.</p>
 
 <h5 id="running-elm-against-converted-vaccination-credentials">Running ELM Against Converted Vaccination Credentials</h5>
 
@@ -661,7 +714,7 @@ npm <span class="nb">install </span>cql-execution cql-exec-fhir
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 3, 2023 17:55+0000">2023-03-03</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 7, 2023 15:50+0000">2023-03-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
