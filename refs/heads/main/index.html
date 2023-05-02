@@ -19,21 +19,12 @@
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/cqf.css" rel="stylesheet"/>
-
     <link href="assets/css/who.css" rel="stylesheet"/>
 <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/local.css" rel="stylesheet"/>
 
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
-<!--
-  Questionnaire:
--->
-    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
-
-
-
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -58,13 +49,19 @@
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 
-<div id="family-nav">
-  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
-</div>
-
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">WHO SMART Trust</span><br/>0.0.1 - CI Build</p>
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART Trust</span>
+            <br/>
+            <span style="display:inline-block;">0.0.1 - CI Build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -133,12 +130,12 @@
       </div>  <!-- /container -->
     </div>  <!-- /segment-navbar -->
     <!--status-bar-->
-    
+
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
           <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
-          
+
         </ul>
       </div>  <!-- /container -->
     </div>  <!-- /segment-breadcrumb -->
@@ -162,7 +159,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
 
-  <table class="">
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://worldhealthorganization.github.io/smart-trust/ImplementationGuide/fhir.who.smart-trust<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://worldhealthorganization.github.io/smart-trust/ImplementationGuide/fhir.who.smart-trust"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://worldhealthorganization.github.io/smart-trust/ImplementationGuide/fhir.who.smart-trust|0.0.1"/></span>
+      </td>
+    </tr>
 
     <tr>
 
@@ -174,14 +179,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <td colspan="4">
         
+          Draft
           
+            as of 2023-02-15
           
         
       </td>
 
 
 
-      <td><i>Computable Name</i>: <span style="font-family: monospace;"></span></td>
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">smarttrust</span></td>
     </tr>
 
 
@@ -191,15 +198,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
   
-  <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#scope">Introduction</a></li><li><a href="#introduction">Creating a new SMART Guideline IG</a></li><li><a href="#3">SMART Guidelines IG Checklist</a></li><li><a href="#4">References</a></li><li><a href="#5">Dependencies</a></li><li><a href="#dependencies">Providing Feedback</a></li><li><a href="#feedback">Community</a></li><li><a href="#Community">Disclaimer</a></li></ul></div>
+  <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#scope">Introduction</a></li><li><a href="#introduction">References</a></li><li><a href="#3">Dependencies</a></li><li><a href="#dependencies">Providing Feedback</a></li><li><a href="#feedback">Community</a></li><li><a href="#Community">Disclaimer</a></li></ul></div>
   
   <a name="scope">   </a>
   
   <h3>Introduction</h3>  <a name="introduction">  </a>
   <div xmlns="http://www.w3.org/1999/xhtml">
 
-    <p>In response to COVID-19, Governments and organizations across the world have developed and adopted standards and technologies to create, present, and verify digital vaccination credentials. However, a global technical framework to enable convenient use and interoperability of these credentials between systems – while also allowing domestic autonomy over their use – does not exist and is critically needed.</p>
-    <p>This guide describes establishment of a federated mechanism between existing trust networks to allow exchange of trusted health data, including COVID-19 certificates, routine immunization data, and home-based records consistent with International Patient Summary standards. This mechanism provides means of harmonizing global health protocol standards and establishing a system for recognition of digital certificates at point of entry.</p>
+
+
+    <a name="1"/><h4>Overview</h4><a name="Overview">  </a>
+    <p>
+      This guide describes the specifcations and onboarding procedureers for WHO's Global Digital Health Certification Netowkr (GDHCN).  The GDHCN is a mechanism which  allows the exchange of trusted health data, including COVID-19 certificates, routine immunization data, and home-based records consistent with International Patient Summary standards. This mechanism provides means of harmonizing global health protocol standards and establishing a system for recognition of digital certificates for continuity of care at point of entry.  The GDHCN is designged to leverage existing investements by jurisdictions that were made under the COVID-19 response and provide the digital health infrastructure needed for resilencey in future epidemic and pandemic responses.
+    </p>
+
+    <p>
+      The GDHCN a digital reflection of the trust WHO already has with Member States. The GDHCN is a digital trust network is based on proven <a href="concepts.html">concepts</a>which are used to describe the specifications and mechanisms for establishing trust.  Eligible partcipants of the trust network may apply to join by following an <a href="concepts_onboarding.html">onboarding process</a>
+    </p>
+
+    
+
+    <a name="2"/><h4>Background &amp; Purpose</h4><a name="Background">  </a>    
+    <p>
+      In response to COVID-19, Governments and organizations across the world have developed and adopted standards and technologies to create, present, and verify digital vaccination credentials. However, a global technical framework to enable convenient use and interoperability of these credentials between systems – while also allowing domestic autonomy over their use – does not exist and is critically needed.
+    </p>
     <p>In addition to verifying and validating COVID-19 certificates, a global digital health trust network can:</p>
     <ul class="">
         <li>Establish trust of digitally signed clinical algorithms published by WHO through the SMART Guidelines work.</li>
@@ -209,7 +231,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <li>Empower individuals to manage their own health and well-being.​</li>
         <li>Prevent the digital divide from increasing</li>
     </ul>
-    <a name="1"/><h4>Background &amp; Purpose</h4><a name="Background">  </a>
+
     <p>The interoperable exchange of health information in a trusted environment is a complex task with an increasingly large number of stakeholders (e.g. public health agencies, accredited labs, border control organizations, institutions authorized to verify) that need to ensure that data is transferred safely and securely, that the health content is interoperable, and that information is understandable and actionable. This guide details how to utilize a global technical framework to allow interoperability of health credentials between
 systems, while preserving domestic autonomy over their use. </p>
 
@@ -221,7 +243,7 @@ systems, while preserving domestic autonomy over their use. </p>
         <li>Workflows for creating, sharing and executing business rules that evaluate public health policies against health data for cross-border or port of entry requirements</li>
         <li>Open source tools and technical guidance to reduce the burden of implementing the technical infrastructure to participate in the federated trust network, including open source trust network infrastructure for jurisdictions to implement their own regional trust networks</li>
     </ul>
-    <a name="1"/><h5>Audience</h5><a name="Audience">  </a>
+    <a name="2.1"/><h5>Audience</h5><a name="Audience">  </a>
     <p>This guide describes expected workflows for potential actors in a trust ecosystem:</p>
     <ul class="">
         <li>Issuers that provide verifiable health credentials to individuals</li>
@@ -232,20 +254,11 @@ systems, while preserving domestic autonomy over their use. </p>
 existing trust networks or potential verifiers who may participate in the federated trust network. Stakeholders include member states, regional networks, and standards development organizations.</p>
 </div>
 
-<!-- BEGIN SECTION TO REMOVE WHEN CREATING A NEW GUIDE-->
-  <h3>Creating a new SMART Guideline IG</h3> <a name="new-guide">  </a>
-  Please review the <a href="instructions.html">instructions</a> for initializing a new SMART Guidelines Implementation Guide.
-
-  <a name="3"/><h3>SMART Guidelines IG Checklist</h3><a name="checklist">  </a>
-  Pleasee review the <a href="checklist.html">checklist</a> of requirements for a SMART Guidelines Implementation Guide.
-
-
-<!-- END SECTION TO REMOVE WHEN CREATING A NEW GUIDE-->
   
-  <a name="4"/><h3>References</h3>  <a name="references">  </a>
+  <h3>References</h3>  <a name="references">  </a>
   This Implementation Guide is based on the following <a href="references.html">References</a>
 
-  <a name="5"/><h3>Dependencies</h3>  <a name="dependencies">  </a>
+  <a name="3"/><h3>Dependencies</h3>  <a name="dependencies">  </a>
   <div xmlns="http://www.w3.org/1999/xhtml">
 
   <p>
@@ -256,8 +269,7 @@ existing trust networks or potential verifiers who may participate in the federa
 </table></div><!--$$3$$-->
 </div>
 
-  
-  
+    
   <h3>Providing Feedback</h3>  <a name="feedback">  </a>
   <div xmlns="http://www.w3.org/1999/xhtml">
   <p>
@@ -265,7 +277,7 @@ existing trust networks or potential verifiers who may participate in the federa
   </p>
   <ul>
     <li>Clicking on one of the Feedbacks link to the right of any section header</li>
-    <li>Sending an email to <a href="mailto:SMART@who.int?subject = Providing Feedback">SMART@who.int</a></li>
+    <li>Sending an email to <a href="mailto:tng-support@who.int?subject = IG Feedback">tng-support@who.int</a></li>
     <li>Creating an issue on GitHub <a href="https://github.com/WorldHealthOrganization/smart-trust">smart-trust repository</a></li>
   </ul>
 </div>
@@ -274,7 +286,7 @@ existing trust networks or potential verifiers who may participate in the federa
   <div xmlns="http://www.w3.org/1999/xhtml">
   <p>Sign up on <a href="https://chat.fhir.org/">chat.fhir.org</a> community and follow the stream who-smart-guidelines for questions, queries and chats related to WHO SMART Guidelines</p>
   
-  <p>WHO also hosts weekly calls on authoring and implementing WHO SMART Guidelines where participation is welcome. Please send an email at <a href="mailto:SMART@who.int?subject = SMART Guidelines Weekly Call">SMART@who.int</a> in order to get invited.</p>
+  <p>WHO also hosts weekly calls on authoring and implementing WHO SMART Guidelines where participation is welcome. Please send an email at <a href="mailto:tng-support@who.int?subject = TNG FHIR IG">tnng-support@who.int</a> in order to get invited.</p>
 </div>
   <h3>Disclaimer</h3>  <a name="disclaimer">  </a>
   <div xmlns="http://www.w3.org/1999/xhtml">
@@ -307,15 +319,14 @@ existing trust networks or potential verifiers who may participate in the federa
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 7, 2023 15:50+0000">2023-03-07</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 2, 2023 12:15+0000">2023-05-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                   | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/WorldHealthOrganization/smart-ig-empty/projects/1">Issues</a>
                 
-                 | <a style="color: #81BEF7" target="_blank" href="http://worldhealthorganization.github.io/smart-trust/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
-                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+| <a style="color: #81BEF7" target="_blank" href="http://worldhealthorganization.github.io/smart-trust/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

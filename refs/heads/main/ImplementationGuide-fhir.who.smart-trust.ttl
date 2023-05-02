@@ -267,6 +267,9 @@
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#current" ]
+     ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "copyrightyear" ]
@@ -562,6 +565,54 @@
          ] ) ;
          fhir:name [ fhir:v "concepts.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Concepts" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "concepts_certificate_governance.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "concepts_certificate_governance.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Concepts Certificate Governance" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "concepts_CertificatePreperation.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "concepts_CertificatePreperation.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Concepts Certificate Preperation" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "concepts_did.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "concepts_did.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Concepts Did" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "concepts_governance.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "concepts_governance.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Concepts Governance" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "concepts_onboarding.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "concepts_onboarding.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Concepts Onboarding" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "concepts_onboarding_checklist.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "concepts_onboarding_checklist.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Concepts Onboarding Checklist" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
