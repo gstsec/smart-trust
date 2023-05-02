@@ -195,9 +195,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="context">Context</h3>
 <p>The secure and trusted exchange of signature keys for GDHCN Trust Network Gateway (TNG) which acts as a central repository for the public keys. Trust Network Participants are empowered to publish the public keys that they use to sign Verifiable Digital Health Certificate. Relying Trust Network Participants can use the TNG to fetch up-to-date public key material on a timely basis.</p>
 
-<p>The trust model of the GDHCN framework is a Public Key Infrastructures (PKI). Each Trust Network Participant maintains one or more Signing Certificate Authority (SCA), certificates of which are relatively long lived. The SCA issues public key certificates for the short lived, Document Signers (i.e. signers for digital COVID certificates), which are called Document Signer Certificates (DSCs). The SCA acts as a trust anchor such that relying Trust Network Participants can use the SCA certificate to validate the authenticity and integrity of the regularly changing DSC certificates. Once validated, the memberstates can provide these certificates (or just the public keys contained therein) to their validation applications.</p>
+<p>The trust model of the GDHCN framework is a Public Key Infrastructures (PKI). Each Trust Network Participant maintains one or more Signing Certificate Authority (SCA), certificates of which are relatively long lived. The SCA issues public key certificates for the short lived, Document Signers (i.e. signers for digital COVID certificates), which are called Document Signer Certificates (DSCs). The SCA acts as a trust anchor such that relying Trust Network Participants can use the SCA certificate to validate the authenticity and integrity of the regularly changing DSC certificates. Once validated, the Trust Network Partcipant can provide these certificates (or just the public keys contained therein) to their validation applications.</p>
 
-<p>Besides SCAs and DSCs, the TNG <em>also</em> relies on PKI to authenticate transactions, sign data, as the basis for authentication and as a means to ensure integrity of the communication channels between the memberstates and the TNG.&lt;</p>
+<p>Besides SCAs and DSCs, the TNG <em>also</em> relies on PKI to authenticate transactions, sign data, as the basis for authentication and as a means to ensure integrity of the communication channels between the Trust Network Participant and the TNG.&lt;</p>
 
 <p>The following picture presents a high-level overview of the system.</p>
 
@@ -257,20 +257,23 @@ Legal and administrative procedures are not in the scope of this document, they 
 <p>In addition to this -  Trust Network Particpant backend systems and the TNG will use mutual TLS authentication to establish a secure connection (see Section “Authentication and connection establishment”). So this is in <em>addition</em> to the signatures in the data exchanged.</p>
 
 <h4 id="authentication-and-connection-establishment">Authentication and connection establishment</h4>
-<p>The TNG uses Transport Layer Security (TLS) with mutual authentication to establish an authenticated encrypted channel between the Trust Network Participants’s backend and the Trust Network Gateway environment. Therefore, the TNG holds a TLS server certificate, abbreviated TNG<sub>TLS</sub> - and the Trust Network Participants backends hold a TLS client certificate – abbreviated TNP<sub>TLS</sub>. Certificate templates are provided in Section “Certificate Templates” \</p>
+<p>The TNG uses Transport Layer Security (TLS) with mutual authentication to establish an authenticated encrypted channel between the Trust Network Participants’s backend and the Trust Network Gateway environment. Therefore, the TNG holds a TLS server certificate, abbreviated TNG<sub>TLS</sub> - and the Trust Network Participants backends hold a TLS client certificate – abbreviated TNP<sub>TLS</sub>. Certificate templates are provided in Section “Certificate Templates”</p>
 
-<p>Every Trust Network Participant’s backend can provide their own TLS certificate. This certificate will be whitelisted explicitly and thus may be issued by a publicly trusted certificate authority (e.g. a certificate authority that follows the baseline requirements of the CA Browser forum), by a juridictional certificate authority or it can be self-signed. Every Trust Network Participant is responsible for their jurisdictional data and the protection of the private key used to establish the connection to the TNG. Clearly, the “bring your own certificate” approach requires a well-defined registration and identification process as well as revocation and renewal procedures that are described in Section “Registration of Trust Network Partcipant Backends”. <br />
-The TNG uses a whitelist where the TLS certificates of TNP backends are added after their successful registration. Only TNP backends that authenticate themselves with a private key that corresponds to a certificate from the whitelist can establish a secure connection to the TNG. <br />
-The TNG will also use a TLS certificate that allows the TNP backends to verify that they are indeed establishing a connection to the “real” TNG and not some malevolent entity posing as TNG. The certificate of the TNG will be provided to the TNP after successful registration (see <a href="concepts_onboarding.html">onboarding processes</a>). The TNG<sub>TLS</sub> certificate will be issued from a publicly trusted CA (included in all major browsers). It is the responsibility of the Trust Network Participants to verify that their connection to the TNG is secure (for example by checking the fingerprint of the TNG<sub>TLS</sub> certificate of the server connected to against the one provided post registration).</p>
+<p>Every Trust Network Participant’s backend can provide their own TLS certificate. This certificate will be whitelisted explicitly and thus may be issued by a publicly trusted certificate authority (e.g. a certificate authority that follows the baseline requirements of the CA Browser forum), by a juridictional certificate authority or it can be self-signed. Every Trust Network Participant is responsible for their jurisdictional data and the protection of the private key used to establish the connection to the TNG. Clearly, the “bring your own certificate” approach requires a well-defined registration and identification process as well as revocation and renewal procedures that are described in Section “Registration of Trust Network Partcipant Backends”.</p>
+
+<p>The TNG uses a whitelist where the TLS certificates of TNP backends are added after their successful registration. Only TNP backends that authenticate themselves with a private key that corresponds to a certificate from the whitelist can establish a secure connection to the TNG.</p>
+
+<p>The TNG will also use a TLS certificate that allows the TNP backends to verify that they are indeed establishing a connection to the “real” TNG and not some malevolent entity posing as TNG. The certificate of the TNG will be provided to the TNP after successful registration (see <a href="concepts_onboarding.html">onboarding processes</a>). The TNG<sub>TLS</sub> certificate will be issued from a publicly trusted CA (included in all major browsers). It is the responsibility of the Trust Network Participants to verify that their connection to the TNG is secure (for example by checking the fingerprint of the TNG<sub>TLS</sub> certificate of the server connected to against the one provided post registration).</p>
 
 <h4 id="signing-certificate-authorities-and-validation-model">Signing Certificate Authorities and Validation Model</h4>
 <p>All Trust Network Participants that take part in the TNG framework MUST use a SCAs to issue the DSCs. Trust Network Participants MAY have more than one SCA, e.g. in case of delegation authorities.
 Each Trust Network Participant can either use existing certificate authorities or they can setup a dedicated (possibly self-signed) certificate authority for the SCA system.
-The Trust Network Participants MUST present their SCA certificate(s) to the TNG operator during the official <a href="concepts_onboarding.html">onboarding procedure</a>. After successful registration of the member state (see section “Registration of Trust Network Partcipant Backends” for more details), the TNG operator will update a signed trust list that contains all SCA certificates that are active. The TNG operator will use a dedicated asymmetric key pair to sign the trust list and the certificates in an offline environment. The private key will not be stored on the online TNG system, such that a compromise of the online system does not enable an attacker to compromise the trust list. The corresponding trust anchor certificate TNG<sub>TA</sub>, will be provided to the Trust Network Participants during the onboarding process. Trust Network Participants can retrieve the trust list from the TNG for their verification procedures.</p>
+The Trust Network Participants MUST present their SCA certificate(s) to the TNG operator during the official <a href="concepts_onboarding.html">onboarding procedure</a>. After successful registration of the Trust Network Participant (see section “Registration of Trust Network Partcipant Backends” for more details), the TNG operator will update a signed trust list that contains all SCA certificates that are active. The TNG operator will use a dedicated asymmetric key pair to sign the trust list and the certificates in an offline environment. The private key will not be stored on the online TNG system, such that a compromise of the online system does not enable an attacker to compromise the trust list. The corresponding trust anchor certificate TNG<sub>TA</sub>, will be provided to the Trust Network Participants during the onboarding process. Trust Network Participants can retrieve the trust list from the TNG for their verification procedures.</p>
 
 <p>The SCA is defined as the certificate authority that issues DSCs, hence Trust Network Participants that use a multi-tier CA hierarchy (e.g. Root CA -&gt; SCA -&gt; DSCs) MUST provide the subordinary certificate authority that issues the DSCs.  So in this case - if a Trust Network Participant uses an existing certificate authority then the GDHCN system will <em>ignore</em> anything above the SCA – and whitelist only the SCA as the trust anchor (even though it is a sub-ordinate CA). This is as the ICAO model [2] only allows for exactly 2 levels - a ‘root’ SCA and a single ‘leaf’ DSC signed by just that SCA.
-In case that a member state operates its own SCA, the member state is responsible for the secure operation and key management of this CA. It must be noted that the SCA acts as the trust anchor for DSCs and therefore, protecting the private key of the SCA is essential for the integrity of the DCC environment. <br />
-The verification model in the DCC PKI is the shell model (for example, defined in [3]), which states that all certificates in the certificate path validation must be valid at a given time (i.e. the time of signature validation). Therefore, the following restrictions apply:</p>
+In case that a Trust Network Participant operates its own SCA, the Trust Network Participant is responsible for the secure operation and key management of this CA. It must be noted that the SCA acts as the trust anchor for DSCs and therefore, protecting the private key of the SCA is essential for the integrity of the DCC environment.</p>
+
+<p>The verification model in the DCC PKI is the shell model (for example, defined in [3]), which states that all certificates in the certificate path validation must be valid at a given time (i.e. the time of signature validation). Therefore, the following restrictions apply:</p>
 <ul>
   <li>The SCA SHALL NOT issue certificates that are longer valid than the CA certificate itself (see [2, Section 5])</li>
   <li>The document signer SHALL NOT sign documents that are longer valid than the DSC itself
@@ -278,15 +281,18 @@ Trust Network Participants that operate their own SCA MUST define validity perio
 </ul>
 
 <h4 id="integrity-and-authenticity-of-uploaded-data">Integrity and authenticity of uploaded data</h4>
-<p>Trust Network Participants can use the TNG to upload and download digitally signed data packages after successful mutual authentication. In the beginning, these data packages contain the DSCs of the Trust Network Participants. <br />
-The key pair that is used by the Trust Network Participant backend for the digital signature of uploaded data packages in the TNG system is called Trust Network Participant  upload signature key pair and the corresponding public key certificate is abbreviated by TNP<sub>UP</sub> certificate. Each Trust Network Certificate brings its own TNP<sub>UP</sub> certificate, which can be self-signed, or issued by an existing certificate authority, such as a public certificate authority (i.e. a certificate authority that issues certificate in accordance with the CAB-Forum baseline requirements). The TNP<sub>UP</sub> certificate shall be different from any other certificates used by the Trust Netowrk Participant (i.e. SCA, TLS client or DSCs). <br />
-The Trust Network Participants MUST provide the upload certificate to the TNG operator during the initial registration procedure (see Section “Registration of Trust Network Participant Backends” for more details). Every Member State is responsible for their jursidiction’s data and it must protect the private key that is used for signing the uploads. Other Trust Network Participants can verify the signed data packages using the upload certificates that are provided by the TNG. <br />
-The TNG verifies the authenticity and integrity of the uploaded data with the TNP<sub>UP</sub>  before they are provided to other Trust Network Participants.</p>
+<p>Trust Network Participants can use the TNG to upload and download digitally signed data packages after successful mutual authentication. In the beginning, these data packages contain the DSCs of the Trust Network Participants.</p>
+
+<p>The key pair that is used by the Trust Network Participant backend for the digital signature of uploaded data packages in the TNG system is called Trust Network Participant  upload signature key pair and the corresponding public key certificate is abbreviated by TNP<sub>UP</sub> certificate. Each Trust Network Certificate brings its own TNP<sub>UP</sub> certificate, which can be self-signed, or issued by an existing certificate authority, such as a public certificate authority (i.e. a certificate authority that issues certificate in accordance with the CAB-Forum baseline requirements). The TNP<sub>UP</sub> certificate shall be different from any other certificates used by the Trust Netowrk Participant (i.e. SCA, TLS client or DSCs).</p>
+
+<p>The Trust Network Participants MUST provide the upload certificate to the TNG operator during the initial registration procedure (see Section “Registration of Trust Network Participant Backends” for more details). Every Trust Network Participant  is responsible for their jursidiction’s data and it must protect the private key that is used for signing the uploads. Other Trust Network Participants can verify the signed data packages using the upload certificates that are provided by the TNG.</p>
+
+<p>The TNG verifies the authenticity and integrity of the uploaded data with the TNP<sub>UP</sub>  before they are provided to other Trust Network Participants.</p>
 
 <h4 id="requirements-on-the-technical-tng-architecture">Requirements on the technical TNG architecture</h4>
 <p>The requirements on the technical TNG architecture can be summarized as follows:</p>
 <ul>
-  <li>The TNG uses mutual TLS authentication to establish an authenticated encrypted connection with the NBs. Therefore, the TNG maintains a whitelist of registered TNP<sub>TLS</sub> client certificates</li>
+  <li>The TNG uses mutual TLS authentication to establish an authenticated encrypted connection with the Trust Network Participant backends. Therefore, the TNG maintains a whitelist of registered TNP<sub>TLS</sub> client certificates</li>
   <li>The TNG uses two digital certificates (TNG<sub>TLS</sub> and TNG<sub>TA</sub>) with two distinct key pairs. The private key of the TNG<sub>TA</sub> key pair is maintained offline (not on the online components of the TNG)</li>
   <li>The TNG maintains a trust list of the TNP<sub>SCA</sub> certificates that is signed with the TNG<sub>TA</sub> private key</li>
   <li>The ciphers used MUST meet the requirements from Section “Cryptographic requirements”</li>
@@ -295,10 +301,11 @@ The TNG verifies the authenticity and integrity of the uploaded data with the TN
 <h3 id="certificate-lifecycle-management">Certificate Lifecycle Management</h3>
 
 <h4 id="registration-of-trust-network-participant-backends">Registration of Trust Network Participant Backends</h4>
-<p>Trust Network Participants MUST register with the TNG operator to take part in the TNG system. This section describes the technical and operational procedure that MUST be followed to register a Trust Network Partcipant backend. Legal and administrative procedures are not in the scope of this document, they must be defined separately. <br />
-The TNG operator and the Trust Network Participant MUST exchange information on technical contact persons for the onboarding process. It is assumed that the technical contact persons are legitimated by their Trust Network Participants and identification/authentication is performed over other channels.</p>
+<p>Trust Network Participants MUST register with the TNG operator to take part in the TNG system. This section describes the technical and operational procedure that MUST be followed to register a Trust Network Partcipant backend. Legal and administrative procedures are not in the scope of this document, they must be defined separately.</p>
 
-<p>The Member State MUST provide three digital certificates during the registration and identification process:</p>
+<p>The TNG operator and the Trust Network Participant MUST exchange information on technical contact persons for the onboarding process. It is assumed that the technical contact persons are legitimated by their Trust Network Participants and identification/authentication is performed over other channels.</p>
+
+<p>The Trust Network Participant MUST provide three digital certificates during the registration and identification process:</p>
 <ul>
   <li>The Trust Network Participants TLS certificate TNP<sub>TLS</sub></li>
   <li>The Trust Network Participants upload certificate TNP<sub>UP</sub></li>
@@ -308,14 +315,14 @@ The TNG operator and the Trust Network Participant MUST exchange information on 
 <p>All provided certificate MUST adhere to the requirements defined in Section “Certificate templates”. The TNG operator will verify that the provided certificate adheres to the requirements of Section “Certificate templates”. <br /><br />
 After the identification and registration, the TNG operator</p>
 <ul>
-  <li>adds the NB<sub>SCA</sub> certificate(s) to the trust list signed with the private key that corresponds to the TNG<sub>TA</sub> public key</li>
-  <li>adds the NB<sub>TLS</sub> certificate to the whitelist of the TNG TLS endpoint</li>
-  <li>adds the NB<sub>UP</sub> certificate to the TNG system</li>
+  <li>adds the TNP<sub>SCA</sub> certificate(s) to the trust list signed with the private key that corresponds to the TNG<sub>TA</sub> public key</li>
+  <li>adds the TNP<sub>TLS</sub> certificate to the whitelist of the TNG TLS endpoint</li>
+  <li>adds the TNP<sub>UP</sub> certificate to the TNG system</li>
   <li>provides the TNG<sub>TA</sub> and TNG<sub>TLS</sub> public key certificate to the Trust Network Participant</li>
 </ul>
 
 <h4 id="certificate-authorities-validity-periods-and-renewal">Certificate authorities, validity periods and renewal</h4>
-<p>In case that a Trust Network Participant wants to operate its own SCA, the SCA certificates will most probably be self-signed certificates. They act as the trust anchor of the Network Participant state and therefore the member state must strongly protect the private key corresponding to the SCA certificate’s public key. It is recommended that the Trust Network Participants use an offline system for their SCA, i.e. a computer system that is not connected to any network. Multi person control should be used to access the system (e.g. following the four eyes principle). After signing DSCs, operational controls should be applied and the system that holds the private SCA key should be stored safely with strong access controls. Hardware Security Modules or Smart Cards can be used to further protect the SCA private key.</p>
+<p>In case that a Trust Network Participant wants to operate its own SCA, the SCA certificates will most probably be self-signed certificates. They act as the trust anchor of the Network Participant state and therefore the Trust Network Participant must strongly protect the private key corresponding to the SCA certificate’s public key. It is recommended that the Trust Network Participants use an offline system for their SCA, i.e. a computer system that is not connected to any network. Multi person control should be used to access the system (e.g. following the four eyes principle). After signing DSCs, operational controls should be applied and the system that holds the private SCA key should be stored safely with strong access controls. Hardware Security Modules or Smart Cards can be used to further protect the SCA private key.</p>
 
 <h5 id="validity-periods">Validity periods</h5>
 <p>Digital certificates contain a validity period that enforces certificate renewal. Renewal is necessary to use fresh cryptographic keys and to adapt the key sizes when new improvements in computation or new attacks threaten the security of the cryptographic algorithm that is used.  The shell model applies (see Section “Signing Certificate Authorities and Validation Model”).
@@ -334,10 +341,13 @@ The following validity periods are recommended based on the assumption of the on
   <li>DSC: 6 months</li>
 </ul>
 
-<p>Trust Network Participants MUST create new upload certificates and TLS certificates timely, e.g. one month, before expiration in order to allow smooth operation. SCA and DSC SHOULD be renewed at least one month before the private key usage ends (considering the necessary operational procedures). Trust Network Participants MUST provide updated SCA, upload and TLS certificates to the TNG operator. <br />
-Expired certificates SHALL be removed from the whitelist and trust list. <br />
-Trust Network Participants and the TNG operator MUST keep track of the validity of their own certificates. There is no central entity that keeps record of the certificate validity and informs the participants. <br />
-The following picture shows the private key usage periods and certificate lifetimes for the recommended times in case that Trust Network Participants want to operate their own SCA (assuming one-year maximum lifetime of signed documents).</p>
+<p>Trust Network Participants MUST create new upload certificates and TLS certificates timely, e.g. one month, before expiration in order to allow smooth operation. SCA and DSC SHOULD be renewed at least one month before the private key usage ends (considering the necessary operational procedures). Trust Network Participants MUST provide updated SCA, upload and TLS certificates to the TNG operator.</p>
+
+<p>Expired certificates SHALL be removed from the whitelist and trust list.</p>
+
+<p>Trust Network Participants and the TNG operator MUST keep track of the validity of their own certificates. There is no central entity that keeps record of the certificate validity and informs the participants.</p>
+
+<p>The following picture shows the private key usage periods and certificate lifetimes for the recommended times in case that Trust Network Participants want to operate their own SCA (assuming one-year maximum lifetime of signed documents).</p>
 
 <p><strong>Validity Times</strong></p>
 <p><img src="ValidityTimes.PNG" class="figure-img img-responsive img-rounded center-block" alt="Validity Times" style="width:70%" /></p>
@@ -404,15 +414,15 @@ SHA-256 SHALL be used as cryptographic hash function (see ISO/IEC 10118-3:2004).
 
 <p>The recommended elliptic curve for EC-DSA is again NIST-p-256 due to its widespread implementation.</p>
 
-<h5 id="sca-certificate-nbsca">SCA certificate (NB<sub>SCA</sub>)</h5>
-<p>The following table gives guidance on the NB<sub>SCA</sub> certificate template in case that a member state decides to operate its own SCA for the DCC system. <strong>Bold</strong> entries are required (MUST be included in the certificate), <em>italic</em> entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
+<h5 id="sca-certificate-tnpsca">SCA certificate (TNP<sub>SCA</sub>)</h5>
+<p>The following table gives guidance on the TNP<sub>SCA</sub> certificate template in case that a Trust Network Participant decides to operate its own SCA for the DCC system. <strong>Bold</strong> entries are required (MUST be included in the certificate), <em>italic</em> entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
 |Field | Value|
 |——| —–|
-|<strong>Subject</strong>|	<strong>cn= &lt;non-empty and unique common name&gt;</strong>, <em>o=&lt;Provider&gt;</em> ,<strong>c=&lt;Member State operating the SCA&gt;</strong>|
+|<strong>Subject</strong>|	<strong>cn= &lt;non-empty and unique common name&gt;</strong>, <em>o=&lt;Provider&gt;</em> ,<strong>c=&lt;Trust Network Participant&gt;</strong>|
 |<strong>Key Usage</strong> |	<strong>certificate signing</strong>, <em>CRL signing</em> (at minimum)|
 |<strong>Basic Constraints</strong>|	<strong>CA = true, path length constraints = 0</strong></p>
 
-<p>In accordance to [2, Section 5], the subject name MUST be non-empty and unique within the specified country. The country code (c) MUST match the country that will use this SCA. The certificate MUST contain a unique subject key identifier (SKI) according to RFC 5280.</p>
+<p>In accordance to [2, Section 5], the subject name MUST be non-empty and unique within the Trust Network Participant’s jurisdiciton. The country code (c) MUST match the jurisdiction that will use this SCA. The certificate MUST contain a unique subject key identifier (SKI) according to RFC 5280.</p>
 
 <h4 id="document-signer-dsc">Document Signer (DSC)</h4>
 
@@ -432,7 +442,7 @@ SHA-256 SHALL be used as cryptographic hash function (see ISO/IEC 10118-3:2004).
     </tr>
     <tr>
       <td><strong>Subject</strong></td>
-      <td><strong>cn=&lt;non-empty and unique common name&gt;</strong> , <em>o=&lt;Provider&gt;</em> ,<strong>c=&lt;Member State that uses this DCS&gt;</strong></td>
+      <td><strong>cn=&lt;non-empty and unique common name&gt;</strong> , <em>o=&lt;Provider&gt;</em> ,<strong>c=&lt;Trust Network Participant that uses this DCS&gt;</strong></td>
     </tr>
     <tr>
       <td><strong>Key Usage</strong></td>
@@ -441,8 +451,9 @@ SHA-256 SHALL be used as cryptographic hash function (see ISO/IEC 10118-3:2004).
   </tbody>
 </table>
 
-<p>The DSC MUST be signed with the private key corresponding to a SCA certificate that is used by the member state. <br />
-The following extension are to be used in accordance to [2, Section 5]:</p>
+<p>The DSC MUST be signed with the private key corresponding to a SCA certificate that is used by the Trust Network Participant.</p>
+
+<p>The following extension are to be used in accordance to [2, Section 5]:</p>
 <ul>
   <li>The certificate MUST contain a Authority Key Identifier (AKI) matching the Subject Key Identifier (SKI) of the issuing SCA certificate</li>
   <li>The certificate SHOULD contain a unique Subject Key Identifier (in accordance to RFC 5280)</li>
@@ -477,7 +488,7 @@ The following extension are to be used in accordance to [2, Section 5]:</p>
 
 <p>These values are defined as non critical, therefore all applications should handle new and/or unknown OIDs gracefully.</p>
 
-<h4 id="upload-certificates-nbup">Upload Certificates (NB<sub>UP</sub>)</h4>
+<h4 id="upload-certificates-tnpup">Upload Certificates (TNP<sub>UP</sub>)</h4>
 <p>The following table provides guidance for the Trust Network Participant backend upload certificate. <strong>Bold</strong> entries are required (MUST be included in the certificate), <em>italic</em> entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.</p>
 
 <table>
@@ -490,7 +501,7 @@ The following extension are to be used in accordance to [2, Section 5]:</p>
   <tbody>
     <tr>
       <td><strong>Subject</strong></td>
-      <td><strong>cn= &lt;non-empty and unique common name&gt;</strong>, <em>o=&lt;Provider&gt;</em> ,<strong>c=&lt;Member State that uses this upload certificate&gt;</strong></td>
+      <td><strong>cn= &lt;non-empty and unique common name&gt;</strong>, <em>o=&lt;Provider&gt;</em> ,<strong>c=&lt;Trust Network Participant that uses this upload certificate&gt;</strong></td>
     </tr>
     <tr>
       <td><strong>Key Usage</strong></td>
@@ -499,11 +510,11 @@ The following extension are to be used in accordance to [2, Section 5]:</p>
   </tbody>
 </table>
 
-<h4 id="trust-network-partciipant-tls-client-authentication-nbtls">Trust Network Partciipant TLS Client Authentication (NB<sub>TLS</sub>)</h4>
+<h4 id="trust-network-partciipant-tls-client-authentication-tnptls">Trust Network Partciipant TLS Client Authentication (TNP<sub>TLS</sub>)</h4>
 <p>The following table provides guidance for the Trust Network Participant backend TLS client authentication certificate. <strong>Bold</strong> entries are required (MUST be included in the certificate), <em>italic</em> entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
 |Field | Value|
 |——| —–|
-|<strong>Subject</strong>|	<strong>cn=&lt;non-empty and unique common name&gt;</strong>, <em>o=&lt;Provider&gt;</em>, <strong>c= &lt;Member State of the NB&gt;</strong>
+|<strong>Subject</strong>|	<strong>cn=&lt;non-empty and unique common name&gt;</strong>, <em>o=&lt;Provider&gt;</em>, <strong>c= &lt;Trust Network Participant that uses this TLS&gt;</strong>
 |<strong>Key Usage</strong>| <strong>digital signature</strong> (at minimum)
 |<strong>Extended Key Usage</strong>|	<strong>client authentication (1.3.6.1.5.5.7.3.2)</strong></p>
 
@@ -517,14 +528,14 @@ The following extension are to be used in accordance to [2, Section 5]:</p>
 <p>The following table defines the TNG Trust Anchor certificate.
 |Field | Value|
 |——| —–|
-|<strong>Subject</strong>|	<strong>cn= Digital COVID Certificate Gateway, o=&lt;Provider&gt; , c=&lt;country&gt;</strong>
+|<strong>Subject</strong>|	<strong>cn= Digital COVID Certificate Gateway, o=&lt;Provider&gt; , c=&lt;Trust Network Participant&gt;</strong>
 |<strong>Key Usage</strong> |<strong>digital signature</strong> (at minimum)</p>
 
 <h4 id="tng-tls-server-certificates-tngtls">TNG TLS Server certificates (TNG<sub>TLS</sub>)</h4>
 <p>The following table defines the TNG TLS certificate.
 |Field | Value|
 |——| —–|
-|<strong>Subject</strong>|	<strong>cn=&lt;FQDN or IP address of the TNG&gt;</strong>, <strong>o=&lt;Provider&gt;</strong> ,<strong>c= &lt;country&gt;</strong>
+|<strong>Subject</strong>|	<strong>cn=&lt;FQDN or IP address of the TNG&gt;</strong>, <strong>o=&lt;Provider&gt;</strong> ,<strong>c= &lt;Trust Network Participant&gt;</strong>
 |<strong>SubjectAltName</strong>| <strong>dnsName: &lt;TNG DNS name&gt; or iPAddress: &lt;TNG IP address&gt;</strong>
 |<strong>Key Usage</strong> |	<strong>digital signature</strong> (at minimum)
 |<strong>Extended Key Usage</strong>|	<strong>server authentication (1.3.6.1.5.5.7.3.1)</strong></p>
@@ -565,7 +576,7 @@ The following extension are to be used in accordance to [2, Section 5]:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 2, 2023 12:15+0000">2023-05-02</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 2, 2023 14:15+0000">2023-05-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

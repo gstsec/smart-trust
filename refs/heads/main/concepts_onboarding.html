@@ -172,6 +172,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#onboarding-process-overview" id="markdown-toc-onboarding-process-overview">Onboarding Process Overview</a></li>
   <li><a href="#interim-onboarding-process" id="markdown-toc-interim-onboarding-process">Interim Onboarding Process</a></li>
   <li><a href="#full-onboarding-process" id="markdown-toc-full-onboarding-process">Full Onboarding Process</a></li>
 </ul>
@@ -179,6 +180,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 <p>The following describes the onboarding processes for the GDHCN.</p>
+
+<h3 id="onboarding-process-overview">Onboarding Process Overview</h3>
+
+<p>The WHO Global Digital Health Certification Network Secretariat is responsible to manage the onboarding process and applications of eligible Trust Network Participants to connect as a trusted party to the trust network. Prepared onboarding records will be handed over to the TNG operator with the request to process the technical onboarding of the trusted party. An organizational and technical successful application results in a confirmation and the Trust Network Participant can connect to the network as a trusted party.</p>
+
+<p><img src="OnboardingOverview.drawio.png" style="float:none; margin: 0px 0px 0px 0px;" /></p>
 
 <p>Starting in September of 2023, partipcation will be opened to other eligible participants following the Full Onboarding Process (FOP).</p>
 
@@ -188,6 +195,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><a href="concepts.html">Concepts</a> underpinning the description of these onboarding processes including the general description of the Terms of Participation; and</li>
   <li><a href="concepts_certificate_governance.html">Certificate Governance</a> describing the governance of public key certificiates.</li>
+</ul>
+
+<h4 id="onboarding-application-requirements">Onboarding Application Requirements</h4>
+
+<p>The application of the Trust Network Participant must contain at least:</p>
+
+<ul>
+  <li>One or more DID or SCA, with a statement about the correctness (will not be additionally checked), optionally SHA256 hashes of the DID Document content to anchor it</li>
+  <li>A statement about the acceptance of keys and processes of other jurisdictions which are present in the gateway lists</li>
+  <li>Contact Persons - Technical, Legal, Governance etc.</li>
+</ul>
+
+<h4 id="secretariat-tasks">Secretariat Tasks</h4>
+<p>The secretariat must handle the following tasks to establish the onboarding process:</p>
+
+<ul>
+  <li>Providing a Secure Channel for the Trust Network Participant to deliver secure and trustworthy applications SCA and/or DID information</li>
+  <li>Creation and Securing a Key Pair (Trust Anchor)  to sign/confirm onboarding requests for the gateway</li>
+  <li>Delivering the Public Key of the Trust Anchor to the Gateway Operations</li>
+  <li>Transmitting Onboarding Requests to the Gateway Operations</li>
 </ul>
 
 <h3 id="interim-onboarding-process">Interim Onboarding Process</h3>
@@ -208,7 +235,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h4 id="interim-terms-of-participation">Interim Terms of Participation</h4>
 <p>The requirements in this document will subsume those outlined in the EC DCC Equivalence Decision Annex II Technical procedure to onboard third countries.  The following abbreviated Terms of Participation will apply during the IOP:</p>
 <ul>
-  <li><strong><em>TOP0</em></strong>  Will leverage current EC processes and share NB<sub>TLS</sub> keys with WHO.  These NB<sub>TLS</sub> keys will be signed by WHO.</li>
+  <li><strong><em>TOP0</em></strong>  Will leverage current EC processes and share TNP<sub>TLS</sub> keys with WHO.  These TNP<sub>TLS</sub> keys will be signed by WHO.</li>
   <li><strong><em>TOP1</em></strong>  Will be considered fulfilled</li>
   <li><strong><em>TOP2</em></strong>  Will be considered fulfilled</li>
   <li><strong><em>TOP3</em></strong>  WHO will ask for an assertion/pledge by eligible Trust Network participants to adhere to the applicable policies but will not be responsible for assessing or enforcing compliance the policies or regulatory on which trusted services which are operated by paricipants of the trust network.</li>
@@ -232,7 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>After positively assessing the application form,  WHO will:
     <ul>
       <li>provide the necessary technical specifications and configuration information to connect to their backend systems to the WHO TNG</li>
-      <li>invite the country to register their production certificates and promote them to the production environment.</li>
+      <li>invite the Trust Network Participant to register their production certificates and promote them to the production environment.</li>
     </ul>
   </li>
 </ul>
@@ -245,16 +272,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The FOP will be in effect in September 2023.</p>
 
 <h5 id="eligibility-1">Eligibility</h5>
-<p>At launcch of FOP at launch, eligibiltiy to join the GDHNC is limited to WHO Member States.</p>
+<p>At launch of FOP at launch, eligibiltiy to join the GDHNC is limited to WHO Member States.</p>
 
 <ol>
   <li><strong>Self-Assessment</strong> Countries interested in joining the GDHCN should conduct a self-assessment using the provided checklist to ensure their system complies with the WHO’s specifications. Eligible participants should adopt the same technical specifications described in the <a href="concepts_onboarding_checklist.html">Onboarding Checklist</a> . Open source implementations should be utilized when possible.</li>
-  <li><strong>Official Request</strong>  If the self-assessment is successful, countries should submit a formal request to the WHO via an official letter expressing their interest in joining the GDHCN. The letter should include a description of the country’s system and the completed checklist as an annexe Upon receipt, the WHO will initiate the procedure to assess the country’s system and determine if the onboarding process can begin.</li>
+  <li><strong>Official Request</strong>  If the self-assessment is successful, countries should submit a formal request to the WHO via an official letter expressing their interest in joining the GDHCN. The letter should include a description of the eligible Trust Network Pariticpiant’s system and the completed checklist as an annex Upon receipt, the WHO will initiate the procedure to assess the eligble Trust Network Partcipant’s system and determine if the onboarding process can begin.</li>
   <li>Steps for Onboarding</li>
 </ol>
 
 <h4 id="organizational-identify-1">Organizational Identify</h4>
-<p>The organizational identity will be estabalished in an offline process by WHO through its country offices with appropriate contacts at ministries of health or appropriate public health agency.</p>
+<p>The organizational identity and contact will be estabalished in an offline process by WHO through it’s Member State country offices with appropriate contacts at ministries of health or appropriate public health agency.</p>
 
 <h4 id="onboarding-steps-1">Onboarding Steps</h4>
 
@@ -301,7 +328,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 2, 2023 12:15+0000">2023-05-02</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 2, 2023 14:15+0000">2023-05-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
