@@ -190,41 +190,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="source-specifications">Source specifications</h4>
 
-<p>It can be difficult to find the “source of truth” specifications for the certificate formats that are mapped to the DDCC core data sets. The following are links to the best known documentation for each of the certificate formats listed above:</p>
-
-<ul>
-  <li><strong>EU DCC</strong>
-    <ul>
-      <li><a href="https://health.ec.europa.eu/publications/technical-specifications-eu-digital-covid-certificates-volumes-1-5_en">Technical specifications for EU Digital COVID Certificates - Volumes 1-5</a>.</li>
-      <li><a href="https://health.ec.europa.eu/system/files/2022-02/digital-covid-certificates_v1_en.pdf">Volume 1: Formats and trust management</a> references “Implementing Decision (EU) 2021/1073, Annex I”.</li>
-      <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2021.230.01.0032.01.ENG">Implementing Decision (EU) 2021/1073, Annex I can be found here</a>, along with other relevant Annexes.</li>
-    </ul>
-  </li>
-  <li><strong>DIVOC</strong>
-    <ul>
-      <li>Elements are defined by JSON-LD. As of 2023-02-12, we were told by the DIVOC team that the most current JSON-LD context for <a href="https://github.com/egovernments/DIVOC/blob/icmr/vaccination-context/vaccination-context.js">vaccines is here</a> and for <a href="https://github.com/egovernments/DIVOC/blob/icmr/test-certificate-context/test-certificate-context.js">test results is here</a>.
-        <ul>
-          <li>Note that the URIs for the DIVOC-specific JSON-LD contexts embedded in the certificates do not resolve.</li>
-        </ul>
-      </li>
-      <li><a href="https://divoc.digit.org">DIVOC’s documentation is here</a>, but this does not include element-level descriptions (e.g., terminology bindings at a per-element level).
-        <ul>
-          <li>Terminology bindings at the element level must be inferred from <a href="https://divoc.digit.org/platform/divocs-verifiable-certificate-features/what-information-goes-into-a-qr-code">more general documentation</a>.</li>
-          <li>The <code class="language-plaintext highlighter-rouge">v2</code> JSON-LD context introduces the <code class="language-plaintext highlighter-rouge">evidence.icd11Code</code> element for vaccines, but there is no documentation on which codes this element is bound to or whether this is used in production.</li>
-          <li>There is no other computable representation of vaccine type/product.</li>
-        </ul>
-      </li>
-      <li>As of 2023-02-12, the public documentation does not include any information on test result certificates. The information we have was provided privately by the DIVOC team.</li>
-    </ul>
-  </li>
-  <li><strong><a href="https://www.icao.int/vdsnc-spec">ICAO</a></strong></li>
-  <li><strong>SMART Health Cards</strong>
-    <ul>
-      <li><a href="https://spec.smarthealth.cards/">General SMART Health Card specification</a></li>
-      <li><a href="http://build.fhir.org/ig/HL7/fhir-shc-vaccination-ig">COVID-19 vaccine and testing-specific specification</a></li>
-    </ul>
-  </li>
-</ul>
+<p>It can be difficult to find the “source of truth” specifications for the certificate formats that are mapped to the DDCC core data sets. The <a href="references.html">references</a> contains links to the best known documentation for each of the certificate formats listed above:</p>
 
 
 
@@ -251,7 +217,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 2, 2023 14:15+0000">2023-05-02</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 2, 2023 14:38+0000">2023-05-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
