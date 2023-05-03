@@ -263,7 +263,7 @@ Legal and administrative procedures are not in the scope of this document, they 
 
 <p>The TNG uses a whitelist where the TLS certificates of TNP backends are added after their successful registration. Only TNP backends that authenticate themselves with a private key that corresponds to a certificate from the whitelist can establish a secure connection to the TNG.</p>
 
-<p>The TNG will also use a TLS certificate that allows the TNP backends to verify that they are indeed establishing a connection to the “real” TNG and not some malevolent entity posing as TNG. The certificate of the TNG will be provided to the TNP after successful registration (see <a href="concepts_onboarding.html">onboarding processes</a>). The TNG<sub>TLS</sub> certificate will be issued from a publicly trusted CA (included in all major browsers). It is the responsibility of the Trust Network Participants to verify that their connection to the TNG is secure (for example by checking the fingerprint of the TNG<sub>TLS</sub> certificate of the server connected to against the one provided post registration).</p>
+<p>The TNG will also use a TLS certificate that allows the TNP backends to verify that they are indeed establishing a connection to the “real” TNG and not some malevolent entity posing as TNG. The TNG<sub>TLS</sub> certificate will be issued from a publicly trusted CA (included in all major browsers). It is the responsibility of the Trust Network Participants to verify that their connection to the TNG is secure (for example by checking the fingerprint of the TNG<sub>TLS</sub> certificate of the server connected to against the one provided post registration).</p>
 
 <h4 id="signing-certificate-authorities-and-validation-model">Signing Certificate Authorities and Validation Model</h4>
 <p>All Trust Network Participants that take part in the TNG framework MUST use a SCAs to issue the DSCs. Trust Network Participants MAY have more than one SCA, e.g. in case of delegation authorities.
@@ -576,7 +576,7 @@ SHA-256 SHALL be used as cryptographic hash function (see ISO/IEC 10118-3:2004).
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 2, 2023 14:48+0000">2023-05-02</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package fhir.who.smart-trust#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 3, 2023 09:18+0000">2023-05-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
