@@ -1,0 +1,62 @@
+{
+  "date" : "Tue, 06 Jun, 2023 07:03:10 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-fhir.who.smart-trust.json",
+      "size" : 6850,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 48,
+          "length" : 135
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 49,
+          "length" : 9
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 236
+        },
+        {
+          "activity" : "validate",
+          "start" : 49,
+          "length" : 1863
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 51,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 51,
+          "length" : 133
+        },
+        {
+          "activity" : "generate2",
+          "start" : 54,
+          "length" : 163
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 64,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 65,
+          "length" : 3
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 68,
+          "length" : 1
+        }
+      ]
+    }
+  ]
+}
