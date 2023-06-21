@@ -1,5 +1,5 @@
 {
-  "date" : "Tue, 20 Jun, 2023 11:00:52 +0000",
+  "date" : "Wed, 21 Jun, 2023 19:04:12 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,63 +8,48 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 60,
-          "length" : 274
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 60,
-          "length" : 1
+          "start" : 50,
+          "length" : 173
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 60,
-          "length" : 17
+          "start" : 50,
+          "length" : 12
         },
         {
           "activity" : "generateNarratives",
-          "start" : 61,
-          "length" : 289
+          "start" : 50,
+          "length" : 211
         },
         {
           "activity" : "validate",
-          "start" : 61,
-          "length" : 2221
+          "start" : 50,
+          "length" : 1751
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 1
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 63,
-          "length" : 3
-        },
-        {
-          "activity" : "validate",
-          "start" : 63,
-          "length" : 1
+          "start" : 52,
+          "length" : 2
         },
         {
           "activity" : "generate1",
-          "start" : 63,
-          "length" : 209
+          "start" : 52,
+          "length" : 143
         },
         {
           "activity" : "generate2",
-          "start" : 66,
-          "length" : 112
-        },
-        {
-          "activity" : "generateExampleZip",
-          "start" : 80,
-          "length" : 1
+          "start" : 55,
+          "length" : 83
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 80,
-          "length" : 6
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 85,
-          "length" : 1
+          "start" : 67,
+          "length" : 5
         }
       ]
     }
